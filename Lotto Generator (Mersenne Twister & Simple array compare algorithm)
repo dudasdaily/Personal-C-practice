@@ -15,7 +15,6 @@ int main()
 
 	int select[6];
 	int lottoArray[6];
-	int cmplotto[6] = { 0 };
 	int RateCount = 0;
 	int count = 1;
 
@@ -53,7 +52,6 @@ int main()
 	{
 		if (select[i] == lottoArray[i])
 		{
-			cmplotto[i]++;
 			RateCount++;
 		}
 	}
