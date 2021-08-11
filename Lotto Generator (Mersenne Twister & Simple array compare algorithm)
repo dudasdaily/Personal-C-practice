@@ -16,7 +16,6 @@ int main()
 	int select[6];
 	int lottoArray[6];
 	int cmplotto[6] = { 0 };
-	int userlottoNum, lottoNum;
 	int RateCount = 0;
 	int count = 1;
 
