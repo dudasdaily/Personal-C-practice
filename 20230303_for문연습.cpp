@@ -16,6 +16,7 @@ int main()
     */
    
    //1부터 n까지 자연수의 합
+   /*
    int n, sum = 0;
 
    printf("자연수 입력 : ");
@@ -27,8 +28,18 @@ int main()
    }
 
    printf("1부터 %d까지의 합 : %d\n", n, sum);
+   */
 
-   return 0;
+  //구구단 출력(중첩 for문)
+  for(int i = 1; i <= 9; i++)
+  {
+      for(int j = 1; j <= 9; j++)
+      printf("%d * %d = %d\t", j, i, i * j);
+
+      printf("\n");
+  }
+
+ return 0;
 }
 
 
