@@ -36,7 +36,7 @@ int main()
 
     // strcpy() => 배열에서 배열로 복사, 상수형(literal) 문자열 대입
     char s2[100];
-    strcpy(s2, s); // 대입연산자 처럼 복사 받는 문자열을 왼쪽으로! strcpy(passive, active);
+    strcpy(s2, s); // 대입연산자 처럼 복사 받는 문자열을 왼쪽으로! strcpy(dest, origin);
     printf("%s\n", s2);
     
     strcpy(s2, "world!"); // 원래 s2에 있던 문자들은 사라짐. 대입연산자와 같은 기능이라 생각하면 편함.
@@ -48,11 +48,13 @@ int main()
 
     //strcpy()와 strcat()는 함수 결과가 널문자를 포함해서 원본 문자열의 길이를 넘어가면 안된다!!
     //이를 보안하기 위해 strncpy()와 strncat()가 있음
+    //https://blockdmask.tistory.com/348 여기 참고하자
 
+    char s3[10] = "Hello";
 
+    strncat(s3, "World!", sizeof(s3));
 
-
-
+    printf("%s\n", s3, sizeof(s3));
     
 
 
