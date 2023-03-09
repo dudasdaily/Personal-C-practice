@@ -3,28 +3,36 @@
 
 int main()
 {
-    int n;
+    int n; scanf("%d", &n);
+    int cnt = 0, score[n] = {0};
+    char str[81] = {0};
+    char tmp[81] = {0};
 
-    scanf("%d", &n);
-
-    char s[n][81];
-    char (*ptr)[81] = s;
-    char tmp[81] = { 0 };
-
-    for(int i = 0; i < n; i++)
-        for(int j = 0; j < 81; j++)
-            s[i][j] = 0;
-    
     for(int i = 0; i < n; i++)
     {
-        scanf("%s", tmp);
-        for(int j = 0; j < strlen(tmp); j++)
-            ptr[i][j] = tmp[j];
+        scanf(" %s", str);
+
+        int j = 0;
+        while(str[j] != 0)
+        {
+            if(str[j] == 'O')
+            {
+                cnt++;
+                j++;
+            }
+            
+            else if(str[j] == 'X')
+            {   
+                for( ; cnt > 0; cnt--)
+                    score[i] += cnt;
+                
+                j++;
+            }
+        }
     }
 
-    printf("%s", s[0]);
-
-
+    for(int i = 0; i < n; i++)
+        printf("%d\n", score[i]);
 
     return 0;
 }
